@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        
+        /* Set the background color for the email */
+        body {
+            background-color: rgb(240, 240, 240);
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+      
+        }
+
+        .header {
+            background-color: rgb(15, 92, 38);
+            height: 100px;
+            width: 100%;
+        }
+
+        /* Style the container */
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+            align-items: center;
+            content: "";
+            display: table;
+            clear: both;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+            padding: 30px;
+            background-color: rgb(255, 255, 255);
+        }
+
+        /* Style the footer */
+        footer {
+            text-align: center;
+            padding: 10px 0;
+        }
+        span {
+            font-weight: bold;
+            font-size: medium;
+        }
+    </style>
+</head>
+<body>
+    <div class="header"></div>
+<div class="container">
+
+
+
+
+<br>
+<h2>Dear Customer,</h2>
+<p>You have received a message from <span>{{ title }}</span></p>
+
+<p><b>Name: </b>{{ name }}</p>
+<p><b>Email: </b>{{ email }}</p>
+<p><b>How may we help you: </b></p>
+<p>{{ content }}</p>
+
+</div>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Contact Us</title>
+</head>
+<body>
+    <header>
+        <h1>SIGN UP</h1>
+    </header>
+
+    {% for message in messages %}
+    <h3>{{ message }}</h3>
+    {% endfor %}
+
+    <form method="POST">
+        {% csrf_token %}
+        <label>Username</label>
+        <input type="username" name="username" id="username" placeholder="Enter your username">
+        <label>Email</label>
+        <input type="email" name="email" id="email" placeholder="Enter your email">
+        <label>Password</label>
+        <input type="password" name="password" id="password" placeholder="Enter your password">
+        <label>Confirm password</label>
+        <input type="password" name="password2" id="password2" placeholder="Re-enter your password">
+        <input type="submit">
+    </form>
+</body>
+</html>
